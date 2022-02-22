@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.wormhole.view.fragments.StartFragment"
+        android:label="fragment_play"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.wormhole.view.fragments.GameFragment"
+        android:label="GameFragment" >
+        <action
+            android:id="@+id/action_gameFragment_to_finishFragment"
+            app:destination="@id/finishFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/finishFragment"
+        android:name="com.example.wormhole.view.fragments.FinishFragment"
+        android:label="fragment_finish"
+        tools:layout="@layout/fragment_finish" >
+        <action
+            android:id="@+id/action_finishFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_finishFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+</navigation>

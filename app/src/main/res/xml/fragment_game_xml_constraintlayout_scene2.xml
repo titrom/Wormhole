@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/hole1" >
+        <Constraint
+            android:id="@+id/mole1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/imageButton1"
+            motion:layout_constrainedHeight="true"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="32dp" >
+            <CustomAttribute
+                motion:attributeName="clickable"
+                motion:customBoolean="true"
+                />
+        </Constraint>
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/hole1" />
+    <Transition
+        motion:constraintSetStart="@+id/hole1"
+        motion:constraintSetEnd="@+id/start" />
+    <ConstraintSet android:id="@+id/hole2" >
+        <Constraint
+            android:id="@+id/mole2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/imageButton1"
+            android:layout_marginBottom="40dp"
+            android:visibility="visible"
+            motion:layout_constrainedHeight="true"
+            motion:layout_constraintStart_toStartOf="@+id/imageButton2" >
+            <CustomAttribute
+                motion:attributeName="clickable"
+                motion:customBoolean="true"
+                />
+        </Constraint>
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/hole2" />
+    <Transition
+        motion:constraintSetStart="@+id/hole2"
+        motion:constraintSetEnd="@+id/start" />
+    <ConstraintSet android:id="@+id/hole3" >
+        <Constraint
+            android:id="@+id/mole3"
+            motion:layout_constraintEnd_toEndOf="@+id/imageButton3"
+            motion:layout_constraintStart_toEndOf="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/imageButton1"
+            android:layout_marginBottom="40dp"
+            android:visibility="visible"
+            motion:layout_constrainedHeight="true" >
+            <CustomAttribute
+                motion:attributeName="clickable"
+                motion:customBoolean="true"
+                />
+        </Constraint>
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/hole3" />
+    <Transition
+        motion:constraintSetStart="@+id/hole3"
+        motion:constraintSetEnd="@+id/start" />
+    <ConstraintSet android:id="@+id/hole4" >
+        <Constraint
+            android:id="@+id/mole4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/imageButton4"
+            android:visibility="visible"
+            motion:layout_constrainedHeight="true"
+            motion:layout_editor_absoluteX="0dp"
+            android:layout_marginBottom="36dp" >
+            <CustomAttribute
+                motion:attributeName="clickable"
+                motion:customBoolean="true"
+                />
+        </Constraint>
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/hole4" />
+    <Transition
+        motion:constraintSetStart="@+id/hole4"
+        motion:constraintSetEnd="@+id/start" />
+    <ConstraintSet android:id="@+id/hole5" >
+
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="@+id/imageButton5"
+            motion:layout_constraintBottom_toBottomOf="@+id/imageButton4"
+            motion:layout_constraintEnd_toEndOf="@+id/imageButton5"
+            android:layout_width="wrap_content"
+            android:id="@+id/mole5"
+            android:layout_marginBottom="36dp"
+            motion:layout_constraintHorizontal_bias="0.0" >
+            <CustomAttribute
+                motion:attributeName="clickable"
+                motion:customBoolean="true"
+                />
+        </Constraint>
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/hole5" />
+    <Transition
+        motion:constraintSetStart="@+id/hole5"
+        motion:constraintSetEnd="@+id/start" />
+    <ConstraintSet android:id="@+id/hole6" >
+        <Constraint
+            android:id="@+id/mole6"
+            motion:layout_constraintEnd_toEndOf="@+id/imageButton6"
+            motion:layout_constraintStart_toEndOf="@+id/mole5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/imageButton4"
+            android:visibility="visible"
+            motion:layout_constrainedHeight="true"
+            android:layout_marginBottom="36dp"
+            motion:layout_constraintHorizontal_bias="0.0" >
+            <CustomAttribute
+                motion:attributeName="clickable"
+                motion:customBoolean="true"
+                />
+        </Constraint>
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/hole6" />
+    <Transition
+        motion:constraintSetStart="@+id/hole6"
+        motion:constraintSetEnd="@+id/start" />
+    <ConstraintSet android:id="@+id/hole7" >
+        <Constraint
+            android:id="@+id/mole7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/imageButto7"
+            android:visibility="visible"
+            motion:layout_constrainedHeight="true"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="36dp" >
+            <CustomAttribute
+                motion:attributeName="clickable"
+                motion:customBoolean="true"
+                />
+        </Constraint>
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/hole7" />
+    <Transition
+        motion:constraintSetStart="@+id/hole7"
+        motion:constraintSetEnd="@+id/start" />
+    <ConstraintSet android:id="@+id/hole8" >
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="44dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/imageButton8"
+            motion:layout_constraintEnd_toEndOf="@+id/imageButton8"
+            android:layout_width="wrap_content"
+            motion:layout_constraintStart_toEndOf="@+id/mole7"
+            android:id="@+id/mole8"
+            motion:layout_constraintHorizontal_bias="0.0" >
+            <CustomAttribute
+                motion:attributeName="clickable"
+                motion:customBoolean="true"
+                />
+        </Constraint>
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/hole8" />
+    <Transition
+        motion:constraintSetStart="@+id/hole8"
+        motion:constraintSetEnd="@+id/start" />
+    <ConstraintSet android:id="@+id/hole9" >
+        <Constraint
+            android:id="@+id/mole9"
+            motion:layout_constraintEnd_toEndOf="@+id/ImageButton9"
+            motion:layout_constraintStart_toEndOf="@+id/mole8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/ImageButton9"
+            android:visibility="visible"
+            motion:layout_constrainedHeight="true"
+            android:layout_marginBottom="44dp"
+            motion:layout_constraintHorizontal_bias="0.0" >
+            <CustomAttribute
+                motion:attributeName="clickable"
+                motion:customBoolean="true"
+                />
+        </Constraint>
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/hole9" />
+    <Transition
+        motion:constraintSetStart="@+id/hole9"
+        motion:constraintSetEnd="@+id/start" />
+
+</MotionScene>

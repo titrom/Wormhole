@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.wormhole.viewModel.GameViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.fragments.GameFragment">
+
+        <TextView
+            android:text="@{String.valueOf(viewmodel.score)}"
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textAlignment="center"
+            android:textSize="128sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            app:layout_constrainedWidth="true"
+            android:id="@+id/textClock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textAlignment="center"
+            android:text="@{String.valueOf(viewmodel.timeGame)}"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toStartOf="@+id/textView4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:text="@{viewmodel.bestScore}"
+            android:textAlignment="center"
+            app:layout_constrainedWidth="true"
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textClock"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <androidx.constraintlayout.motion.widget.MotionLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            app:layoutDescription="@xml/fragment_game_xml_constraintlayout_scene2"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textClock">
+
+
+            <ImageView
+                android:id="@+id/mole1"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginBottom="56dp"
+                android:clickable="true"
+                android:contentDescription="@string/hole"
+                android:focusable="true"
+                android:onClick="@{viewmodel.onClickMoles}"
+                android:src="@drawable/mini_mole"
+                android:visibility="invisible"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton1"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/hole"
+                android:src="@drawable/hole"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <ImageView
+                android:id="@+id/mole2"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{viewmodel.onClickMoles}"
+                android:src="@drawable/mini_mole"
+                android:visibility="invisible"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton1"
+                app:layout_constraintStart_toStartOf="@+id/imageButton2" />
+
+            <ImageView
+                android:id="@+id/imageButton2"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/hole"
+                android:src="@drawable/hole"
+                app:layout_constraintStart_toEndOf="@+id/imageButton1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/mole3"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{viewmodel.onClickMoles}"
+                android:src="@drawable/mini_mole"
+                android:visibility="invisible"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton1"
+                app:layout_constraintEnd_toEndOf="@+id/imageButton3"
+                app:layout_constraintStart_toEndOf="@+id/imageButton2" />
+
+            <ImageView
+                android:layout_marginTop="16dp"
+
+                android:id="@+id/imageButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:contentDescription="@string/hole"
+                android:src="@drawable/hole"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButton2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/mole4"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{viewmodel.onClickMoles}"
+                android:src="@drawable/mini_mole"
+                android:visibility="invisible"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton1" />
+
+            <ImageView
+                android:id="@+id/imageButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:contentDescription="@string/hole"
+                android:src="@drawable/hole"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton1" />
+
+            <ImageView
+                android:id="@+id/mole5"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{viewmodel.onClickMoles}"
+                android:src="@drawable/mini_mole"
+                android:visibility="invisible"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
+                app:layout_constraintEnd_toEndOf="@+id/imageButton5"
+                app:layout_constraintStart_toStartOf="@+id/imageButton5"
+                app:layout_constraintTop_toBottomOf="@+id/mole2" />
+
+            <ImageView
+                android:id="@+id/imageButton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:contentDescription="@string/hole"
+                android:src="@drawable/hole"
+                app:layout_constraintStart_toEndOf="@+id/imageButton1"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+
+            <ImageView
+                android:id="@+id/mole6"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{viewmodel.onClickMoles}"
+                android:src="@drawable/mini_mole"
+                android:visibility="invisible"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
+                app:layout_constraintEnd_toEndOf="@+id/imageButton6"
+                app:layout_constraintStart_toEndOf="@+id/mole5"
+                app:layout_constraintTop_toBottomOf="@+id/mole3" />
+
+            <ImageView
+                android:id="@+id/imageButton6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:contentDescription="@string/hole"
+                android:src="@drawable/hole"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButton2"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+
+            <ImageView
+                android:id="@+id/mole7"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{viewmodel.onClickMoles}"
+                android:src="@drawable/mini_mole"
+                android:visibility="invisible"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButto7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+
+            <ImageView
+
+                android:id="@+id/imageButto7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:contentDescription="@string/hole"
+                android:src="@drawable/hole"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+
+            <ImageView
+                android:id="@+id/mole8"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{viewmodel.onClickMoles}"
+                android:src="@drawable/mini_mole"
+                android:visibility="invisible"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton8"
+                app:layout_constraintStart_toEndOf="@+id/mole7"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
+
+            <ImageView
+                android:id="@+id/imageButton8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:contentDescription="@string/hole"
+                android:src="@drawable/hole"
+                app:layout_constraintStart_toEndOf="@+id/imageButton1"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
+
+            <ImageView
+                android:id="@+id/mole9"
+
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:onClick="@{viewmodel.onClickMoles}"
+                android:src="@drawable/mini_mole"
+                android:visibility="invisible"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintBottom_toBottomOf="@+id/ImageButton9"
+                app:layout_constraintEnd_toEndOf="@+id/ImageButton9"
+                app:layout_constraintStart_toEndOf="@+id/mole8"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
+
+            <ImageView
+                android:id="@+id/ImageButton9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:contentDescription="@string/hole"
+                android:src="@drawable/hole"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButton2"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
+        </androidx.constraintlayout.motion.widget.MotionLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

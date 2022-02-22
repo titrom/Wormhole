@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Whac-A-Mole</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mole">Mole</string>
+    <string name="best_score">Best score: </string>
+    <string name="play">play</string>
+    <string name="hole">hole</string>
+    <string name="play_again">play again</string>
+    <string name="menu">menu</string>
+</resources>
